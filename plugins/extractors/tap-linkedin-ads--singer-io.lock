@@ -1,0 +1,70 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-linkedin-ads",
+  "namespace": "tap_linkedin_ads",
+  "variant": "singer-io",
+  "label": "LinkedIn Ads",
+  "docs": "https://hub.meltano.com/extractors/tap-linkedin-ads--singer-io",
+  "repo": "https://github.com/singer-io/tap-linkedin-ads",
+  "pip_url": "tap-linkedin-ads",
+  "capabilities": [
+    "catalog",
+    "discover",
+    "state"
+  ],
+  "settings_group_validation": [
+    [
+      "accounts",
+      "access_token",
+      "user_agent"
+    ]
+  ],
+  "settings": [
+    {
+      "name": "accounts",
+      "label": "Accounts",
+      "description": "A comma separated list of account IDs, e.g. \"id1, id2, id3\""
+    },
+    {
+      "name": "client_id",
+      "kind": "password",
+      "label": "Client ID",
+      "description": "The API client ID."
+    },
+    {
+      "name": "date_window_size",
+      "kind": "integer",
+      "label": "Date Window Size",
+      "description": "The date window to request date from. The default is 30 days."
+    },
+    {
+      "name": "page_size",
+      "kind": "integer",
+      "label": "Page Size",
+      "description": "The page size for requests. Default, 100."
+    },
+    {
+      "name": "client_secret",
+      "kind": "password",
+      "label": "Client Secret",
+      "description": "Your client secret."
+    },
+    {
+      "name": "access_token",
+      "kind": "password",
+      "label": "Access Token",
+      "description": "Your access token."
+    },
+    {
+      "name": "user_agent",
+      "label": "User Agent",
+      "description": "The user agent to send with requests."
+    },
+    {
+      "name": "refresh_token",
+      "kind": "password",
+      "label": "Refresh Token",
+      "description": "Your refresh token."
+    }
+  ]
+}

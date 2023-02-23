@@ -1,0 +1,19 @@
+version: 1
+default_environment: dev
+project_id: a47df3aa-01e4-4a18-9f4b-e0abe2be9e1d
+plugins:
+  extractors:
+  - name: tap-linkedin-ads
+    variant: singer-io
+    pip_url: tap-linkedin-ads
+  loaders:
+  - name: target-snowflake
+    variant: transferwise
+    pip_url: pipelinewise-target-snowflake
+  - name: target-csv
+    variant: hotgluexyz
+    pip_url: git+https://github.com/hotgluexyz/target-csv.git
+environments:
+- name: dev
+- name: staging
+- name: prod
