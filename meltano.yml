@@ -6,6 +6,9 @@ plugins:
   - name: tap-linkedin-ads
     variant: singer-io
     pip_url: tap-linkedin-ads
+  - name: tap-facebook
+    variant: singer-io
+    pip_url: git+https://github.com/singer-io/tap-facebook.git
   loaders:
   - name: target-snowflake
     variant: transferwise
